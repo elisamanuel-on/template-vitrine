@@ -1,0 +1,310 @@
+/* ============================================
+   TEMPLATE "VITRINE" — Sole House (Sneakers & Streetwear)
+   ============================================
+   Tema ousado: preto + verde-lima néon, streetwear.
+   Para reutilizar noutra loja, muda as variáveis de
+   cor aqui em baixo e os textos/produtos no index.html.
+   ============================================ */
+
+:root {
+    --cor-primaria: #c6ff00;
+    --cor-primaria-escura: #9fd400;
+    --cor-destaque: #ff4fd8;
+
+    --cor-escuro: #0a0a0a;
+    --cor-escuro-suave: #171717;
+
+    --cor-texto: #16130a;
+    --cor-texto-suave: #6b6558;
+    --cor-fundo: #ffffff;
+    --cor-fundo-suave: #f7f8ef;
+    --cor-borda: #e4e6d5;
+
+    --fonte-base: 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
+    --raio: 10px;
+    --sombra: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--fonte-base); color: var(--cor-texto); background: var(--cor-fundo); line-height: 1.6; }
+.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+h1, h2, h3 { line-height: 1.2; font-weight: 900; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.1rem, 4.4vw, 3.4rem); }
+h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+h3 { font-size: 1.15rem; margin-bottom: 8px; }
+p { color: var(--cor-texto-suave); }
+
+.icone-svg, svg { width: 24px; height: 24px; }
+
+.etiqueta {
+    display: inline-block;
+    color: var(--cor-primaria-escura);
+    font-weight: 800;
+    font-size: 0.86rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+}
+.etiqueta-clara { color: var(--cor-primaria); }
+.etiqueta-centro { display: block; text-align: center; }
+.titulo-centro { text-align: center; margin-bottom: 48px; }
+.destaque-texto { color: var(--cor-primaria-escura); }
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: var(--raio);
+    font-weight: 800;
+    font-size: 0.95rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: scale(0.96); }
+.btn-grande { padding: 14px 30px; font-size: 1rem; }
+.btn-primario { background: var(--cor-primaria); color: var(--cor-escuro); }
+.btn-primario:hover { background: var(--cor-primaria-escura); box-shadow: var(--sombra); }
+.btn-secundario { background: transparent; border-color: rgba(255, 255, 255, 0.35); color: #fff; }
+.btn-secundario:hover { border-color: var(--cor-primaria); color: var(--cor-primaria); }
+.btn-branco { background: #fff; color: var(--cor-escuro); }
+.btn-branco:hover { background: var(--cor-fundo-suave); }
+
+/* ============================================
+   CABEÇALHO
+   ============================================ */
+header#cabecalho {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10, 10, 10, 0.94);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.header-content { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.logo { display: flex; align-items: center; gap: 8px; font-weight: 900; font-size: 1.2rem; letter-spacing: 0.02em; color: #fff; }
+.logo-icone { width: 34px; height: auto; }
+#navPrincipal { display: flex; gap: 28px; }
+#navPrincipal a { font-weight: 600; color: rgba(255, 255, 255, 0.82); transition: color 0.15s ease; }
+#navPrincipal a:hover { color: var(--cor-primaria); }
+.header-acoes { display: flex; align-items: center; gap: 16px; }
+.btn-menu { display: none; background: none; border: none; cursor: pointer; color: #fff; padding: 6px; }
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+    position: relative;
+    padding: 110px 0 90px;
+    background: var(--cor-escuro);
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+.hero-fundo { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.hero-grelha {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(198, 255, 0, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(198, 255, 0, 0.06) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 40%, transparent 100%);
+}
+.hero-tenis {
+    position: absolute;
+    bottom: -6%; right: -3%;
+    width: 380px;
+    opacity: 0.9;
+    transform: rotate(-8deg);
+    filter: drop-shadow(0 14px 30px rgba(0, 0, 0, 0.45));
+    animation: flutuarTenis 6s ease-in-out infinite;
+}
+@keyframes flutuarTenis {
+    0%, 100% { transform: rotate(-8deg) translateY(0); }
+    50% { transform: rotate(-4deg) translateY(-14px); }
+}
+.hero-content { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
+.hero h1 { margin-bottom: 18px; }
+.hero-subtitulo { color: rgba(255, 255, 255, 0.78); font-size: 1.05rem; margin-bottom: 30px; }
+.hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* ============================================
+   COLEÇÃO / PRODUTOS
+   ============================================ */
+.colecao { padding: 90px 0; }
+.produtos-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.produto-cartao {
+    background: #fff;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    padding: 18px;
+    position: relative;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.produto-cartao:hover { transform: translateY(-4px); box-shadow: var(--sombra); }
+.produto-imagem {
+    background: var(--cor-fundo-suave);
+    border-radius: var(--raio);
+    aspect-ratio: 4 / 3;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--cor-produto, var(--cor-primaria));
+    margin-bottom: 14px;
+    padding: 14px;
+}
+.produto-imagem svg { width: 100%; height: auto; }
+.produto-tag {
+    position: absolute;
+    top: 30px; left: 30px;
+    font-size: 0.68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    color: var(--cor-escuro);
+}
+.produto-tag-novo { background: var(--cor-primaria); }
+.produto-tag-limitado { background: #ff4fd8; color: #fff; }
+.produto-tag-mais-vendido { background: #3ec8ff; }
+.produto-desc { font-size: 0.87rem; margin-bottom: 14px; }
+.produto-rodape { display: flex; align-items: center; justify-content: space-between; }
+.produto-preco { font-weight: 900; font-size: 1.1rem; color: var(--cor-texto); }
+.produto-link { font-weight: 700; font-size: 0.88rem; color: var(--cor-primaria-escura); }
+.produto-link:hover { text-decoration: underline; }
+
+/* ============================================
+   SOBRE
+   ============================================ */
+.sobre { padding: 90px 0; background: var(--cor-fundo-suave); }
+.sobre-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
+.sobre-texto p { margin-top: 14px; }
+.sobre-destaques { display: grid; gap: 20px; }
+.destaque {
+    background: #fff;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    padding: 22px 26px;
+    display: flex;
+    flex-direction: column;
+}
+.destaque-numero { font-size: 2rem; font-weight: 900; color: var(--cor-primaria-escura); }
+.destaque-label { color: var(--cor-texto-suave); font-size: 0.95rem; }
+
+/* ============================================
+   DEPOIMENTOS
+   ============================================ */
+.depoimentos { padding: 90px 0; }
+.depoimentos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.depoimento-cartao {
+    background: var(--cor-fundo-suave);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    padding: 26px;
+}
+.depoimento-texto { font-style: italic; color: var(--cor-texto); margin-bottom: 16px; }
+.depoimento-autor { font-weight: 800; color: var(--cor-texto); }
+.depoimento-cargo { font-size: 0.85rem; }
+
+/* ============================================
+   FAIXA CTA
+   ============================================ */
+.cta-faixa {
+    background: var(--cor-escuro);
+    color: #fff;
+    padding: 64px 0;
+    text-align: center;
+}
+.cta-faixa h2 { margin-bottom: 10px; }
+.cta-faixa p { color: rgba(255, 255, 255, 0.72); margin-bottom: 26px; }
+
+/* ============================================
+   CONTACTO
+   ============================================ */
+.contacto { padding: 90px 0; }
+.contacto-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 48px; }
+.contacto-info { display: flex; flex-direction: column; gap: 20px; }
+.contacto-item { display: flex; align-items: center; gap: 14px; color: var(--cor-texto); }
+.contacto-item svg { color: var(--cor-primaria-escura); flex-shrink: 0; }
+
+.contacto-form { display: flex; flex-direction: column; gap: 6px; }
+.contacto-form label { font-weight: 700; font-size: 0.9rem; margin-top: 10px; }
+.contacto-form input, .contacto-form textarea {
+    padding: 11px 14px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    font-family: inherit;
+    font-size: 0.95rem;
+    resize: vertical;
+}
+.contacto-form input:focus, .contacto-form textarea:focus { outline: none; border-color: var(--cor-primaria-escura); }
+.contacto-form button { margin-top: 16px; align-self: flex-start; }
+.form-nota { margin-top: 10px; font-size: 0.88rem; }
+
+.confirmacao-envio {
+    margin-top: 10px;
+    background: var(--cor-fundo-suave);
+    border: 1px solid var(--cor-primaria-escura);
+    border-radius: var(--raio);
+    padding: 18px;
+}
+.confirmacao-titulo { font-weight: 800; color: var(--cor-texto); margin-bottom: 6px; }
+.confirmacao-texto { font-size: 0.88rem; margin-bottom: 14px; }
+.confirmacao-acoes { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+.btn-secundario-claro { background: #fff; border-color: var(--cor-borda); color: var(--cor-texto); }
+.btn-secundario-claro:hover { border-color: var(--cor-primaria-escura); color: var(--cor-primaria-escura); }
+.btn-secundario-claro.copiado { background: var(--cor-primaria); border-color: var(--cor-primaria); color: var(--cor-escuro); }
+.confirmacao-texto-area {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    font-family: inherit;
+    font-size: 0.82rem;
+    color: var(--cor-texto-suave);
+    background: #fff;
+    resize: vertical;
+}
+
+/* ============================================
+   RODAPÉ
+   ============================================ */
+.rodape { padding: 30px 0; border-top: 1px solid var(--cor-borda); }
+.rodape-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.rodape-content p { font-size: 0.88rem; }
+.rodape-social { display: flex; gap: 14px; }
+.rodape-social svg { width: 20px; height: 20px; color: var(--cor-texto-suave); transition: color 0.15s ease; }
+.rodape-social a:hover svg { color: var(--cor-primaria-escura); }
+
+/* ============================================
+   ANIMAÇÃO DE ENTRADA
+   ============================================ */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visivel { opacity: 1; transform: translateY(0); }
+
+/* ============================================
+   RESPONSIVO
+   ============================================ */
+@media (max-width: 980px) {
+    .produtos-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+    .sobre-grid, .contacto-grid { grid-template-columns: 1fr; }
+    .depoimentos-grid { grid-template-columns: 1fr; }
+    .hero-tenis { width: 260px; }
+}
+
+@media (max-width: 640px) {
+    #navPrincipal {
+        position: fixed; top: 72px; left: 0; right: 0;
+        background: var(--cor-escuro); border-bottom: 1px solid rgba(255,255,255,0.1);
+        flex-direction: column; padding: 20px 24px; gap: 16px;
+        display: none;
+    }
+    #navPrincipal.aberto { display: flex; }
+    .btn-menu { display: block; }
+    .header-acoes .btn-primario { display: none; }
+    .produtos-grid { grid-template-columns: 1fr; }
+    .hero { padding: 90px 0 60px; }
+    .hero-tenis { width: 200px; opacity: 0.5; }
+}
