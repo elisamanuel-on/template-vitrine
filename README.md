@@ -1,38 +1,55 @@
-# Template "Vitrine" — Sole House (exemplo sneakers/streetwear)
+# Template Vitrine — Sole House
 
-Site institucional estático de uma página. Esta versão está vestida como **"Sole House"**, uma loja fictícia de sneakers e streetwear — serve para mostrar o motor genérico já aplicado a um caso real, com cores, imagens e textos próprios do tema.
+Template de loja online "vitrine" (sneakers & streetwear) feito só com HTML, CSS e JavaScript.
+Sem frameworks, sem servidor e sem base de dados: abre o `index.html` e funciona.
 
-O motor por baixo continua genérico: dá para reskin para qualquer negócio de vitrine (consultoria, oficina, salão, clínica, loja, etc.) trocando cores, textos e o catálogo de produtos/serviços.
+## O que inclui
+
+- Cabeçalho flutuante com mega menu (categorias, coleções, materiais) e menu lateral no telemóvel
+- Pesquisa em ecrã inteiro, com sugestões
+- Carrinho lateral com barra de portes grátis e finalização **simulada** (nada é cobrado nem enviado)
+- Página de coleção com filtros (categoria, material, saldos), ordenação e contagem de resultados
+- Contagem decrescente de drop, carrossel de mais vendidos, histórias, perguntas frequentes, depoimentos
+- Newsletter e formulário de contacto (abre o email do cliente ou copia a mensagem)
 
 ## Estrutura
-- `index.html` — todo o conteúdo e secções
-- `style.css` — todo o estilo (paleta lima/preto + rosa de destaque)
-- `script.js` — menu mobile, animações ao scroll e formulário de contacto (com confirmação + copiar mensagem)
 
-## Como adaptar a um cliente novo
+| Ficheiro | Para que serve |
+|---|---|
+| `index.html` | Página inicial |
+| `colecao.html` | Página de produtos com filtros |
+| `style.css` | Todo o visual. As cores e os cantos estão nas variáveis `:root` no topo |
+| `app.js` | Dados da loja (`CONFIG` e `PRODUTOS`) e todo o comportamento |
+| `img/` | Imagens usadas pelo site |
+| `produtos-fotos/` | Fotos originais (não são usadas pelo site; pode apagar se quiser) |
+| `versao-anterior/` | Versão antiga do template, só como cópia de segurança |
 
-1. **Cores da marca** — abre `style.css` e muda as variáveis em `:root`:
-   ```css
-   --cor-primaria: #c6ff00;
-   --cor-primaria-escura: #9fd400;
-   --cor-destaque: #ff4fd8;
-   --cor-escuro: #0a0a0a;
-   ```
-2. **Nome, textos e produtos** — em `index.html`, substitui:
-   - "SOLE HOUSE" (logo, título, rodapé)
-   - Textos do Hero, Sobre, secção Coleção (4 cartões de produto) e Depoimentos
-   - Dados de contacto (telefone, email, morada, horário)
-3. **Imagens dos produtos** — os 4 cartões usam o mesmo ícone SVG de sneaker (`fill="currentColor"`), recolorido por cartão através de `style="--cor-produto:#HEX"`. Para trocar por fotos reais, substitui o `<svg>` de cada `.produto-imagem` por uma `<img>`.
-4. **Email de contacto** — em `script.js`, troca `EMAIL_LOJA = 'ola@solehouse.pt'` pelo email real do negócio.
-5. **Redes sociais** — no rodapé de `index.html`, troca os `href="#"` pelos links reais.
+## Como adaptar a uma loja
 
-## O que este template NÃO faz
-O formulário de contacto não tem servidor próprio. Ao submeter, mostra sempre um painel de confirmação com a mensagem pronta a copiar, e também tenta abrir o email do visitante já preenchido (isto só funciona se houver um cliente de email configurado no computador — por isso a opção "Copiar mensagem" é a garantia que funciona sempre).
+1. **Email da loja:** em `app.js`, altere `CONFIG.email`.
+2. **Produtos:** em `app.js`, edite a lista `PRODUTOS` (nome, preço, cores, tamanhos, stock, imagem).
+3. **Cores:** em `style.css`, no bloco `:root`, altere `--acc` (cor de destaque), `--bg`, `--ink`, etc.
+4. **Textos e imagens:** edite `index.html` e substitua os ficheiros de `img/` por fotos da própria loja (mantenha os nomes ou atualize-os no HTML e no `app.js`).
 
-Se o cliente quiser um catálogo interativo com filtros, calculadora de orçamento ou marcações, usa o template **"interativo"**.
+Os preços, avaliações e stocks incluídos são de exemplo.
 
-## Publicar online
-Gratuito e simples com o Render (Static Site) ou GitHub Pages:
-1. Cria um repositório no GitHub e envia estes ficheiros.
-2. No Render, cria um "Static Site" ligado ao repositório (Build Command vazio, Publish directory `.`).
-3. O site fica disponível num URL `https://nome-do-site.onrender.com`.
+## Como publicar
+
+**Render (Static Site)**
+
+1. Envie o projeto para o GitHub.
+2. No Render: *New + → Static Site* e escolha o repositório.
+3. *Build Command*: deixe vazio. *Publish Directory*: `.`
+4. *Create Static Site*. Cada `git push` atualiza o site.
+
+**GitHub Pages:** *Settings → Pages → Deploy from a branch → main / (root)*.
+
+## Testar localmente
+
+Basta abrir `index.html` no navegador. Para testar como no servidor:
+
+```
+python -m http.server 8000
+```
+
+e abrir http://localhost:8000

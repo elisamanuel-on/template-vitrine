@@ -1,371 +1,203 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" data-img="img/">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sole House | Sneakers & Streetwear</title>
+    <title>Sneakers & Streetwear | Sole House</title>
     <meta name="description" content="Sneakers e streetwear com curadoria a sério — peças autênticas, edições limitadas e cultura de sempre.">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="opcao-c">
 
-    <!-- ============================================
-         CABEÇALHO
-         ============================================ -->
+    <div class="anuncios" id="anuncios" role="region" aria-label="Avisos da loja">
+        <p class="anuncio ativo">Entrega em 48h em Portugal continental</p>
+        <p class="anuncio">Portes grátis a partir de 150 €</p>
+        <p class="anuncio">Trocas gratuitas até 30 dias</p>
+        <p class="anuncio">★ 4,8 / 5 · mais de 1 200 avaliações</p>
+    </div>
     <header id="cabecalho">
         <div class="container header-content">
-            <a href="#topo" class="logo">
-                <svg class="logo-icone" viewBox="0 0 200 100" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-                    <path d="M10 72 C 8 56, 10 44, 22 36 C 30 31, 36 28, 40 20 C 44 12, 52 8, 60 12 C 66 15, 66 22, 70 24 C 90 24, 150 28, 172 44 C 184 53, 190 60, 190 70 L 10 70 Z" fill="#c6ff00"/>
-                    <path d="M8 70 L192 70 C 196 70 198 74 196 80 C 194 88 186 92 174 92 L 30 92 C 16 92 8 86 6 78 C 5 74 6 70 8 70 Z" fill="#2a2a2a" stroke="#c6ff00" stroke-width="2"/>
-                </svg>
-                SOLE HOUSE
-            </a>
-
-            <nav id="navPrincipal">
-                <a href="#colecao">Coleção</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#contacto">Loja & Contacto</a>
+            <a href="index.html" class="logo"><svg class="logo-icone" viewBox="0 0 200 100" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M10 72 C 8 56, 10 44, 22 36 C 30 31, 36 28, 40 20 C 44 12, 52 8, 60 12 C 66 15, 66 22, 70 24 C 90 24, 150 28, 172 44 C 184 53, 190 60, 190 70 L 10 70 Z" fill="#c6ff00"/><path d="M8 70 L192 70 C 196 70 198 74 196 80 C 194 88 186 92 174 92 L 30 92 C 16 92 8 86 6 78 C 5 74 6 70 8 70 Z" fill="#2a2a2a" stroke="#c6ff00" stroke-width="2"/></svg>SOLE HOUSE</a>
+            <nav id="navPrincipal" aria-label="Principal">
+                <ul class="menu">
+                    <li class="item tem-mega">
+                        <a href="colecao.html">Calçado</a>
+                        <button type="button" class="item-mega-btn" aria-expanded="false" aria-label="Abrir submenu Calçado">+</button>
+                        <div class="mega">
+                            <div class="mega-inner">
+                                <div><h4>Categorias</h4><ul>
+                                    <li><a href="colecao.html?cat=Running">Running</a></li><li><a href="colecao.html?cat=Lifestyle">Lifestyle</a></li>
+                                    <li><a href="colecao.html?cat=Cano%20alto">Cano alto</a></li><li><a href="colecao.html">Ver tudo</a></li></ul></div>
+                                <div><h4>Coleções</h4><ul>
+                                    <li><a href="colecao.html?sort=novidades">Novidades</a></li><li><a href="colecao.html?sort=vendidos">Mais vendidos</a></li>
+                                    <li><a href="colecao.html?sale=1">Saldos</a></li></ul></div>
+                                <div><h4>Materiais</h4><ul>
+                                    <li><a href="colecao.html?mat=Malha">Malha</a></li><li><a href="colecao.html?mat=Sint%C3%A9tico">Sintético</a></li><li><a href="colecao.html?mat=Lona">Lona</a></li></ul></div>
+                                <div class="mega-cards">
+                                    <a class="mega-card" href="colecao.html?sort=novidades"><img src="img/q-run.webp" alt="" loading="lazy"><span>Novidades</span></a>
+                                    <a class="mega-card" href="colecao.html?sale=1"><img src="img/q-life.webp" alt="" loading="lazy"><span>Saldos</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item"><a href="colecao.html?sort=novidades">Novidades</a></li>
+                    <li class="item"><a href="colecao.html?sale=1">Saldos</a></li>
+                    <li class="item"><a href="index.html#sobre">Sobre</a></li>
+                    <li class="item"><a href="index.html#contacto">Loja &amp; Contacto</a></li>
+                </ul>
             </nav>
-
             <div class="header-acoes">
-                <a href="#colecao" class="btn btn-primario">Ver Coleção</a>
-                <button id="btnMenu" class="btn-menu" aria-label="Abrir menu" aria-expanded="false">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-                </button>
+                <button type="button" class="ic" data-abrir="busca" aria-label="Pesquisar" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+                <a href="index.html#contacto" class="ic" aria-label="Conta e apoio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.2-6.5 8-6.5s7 2 8 6.5"/></svg></a>
+                <button type="button" class="ic" data-abrir="carrinho" aria-label="Abrir carrinho" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="contagem" hidden>0</span></button>
+                <button type="button" class="ic btn-menu" data-abrir="navPrincipal" aria-label="Abrir menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
             </div>
         </div>
     </header>
 
-    <!-- ============================================
-         HERO
-         ============================================ -->
-    <section id="topo" class="hero">
-        <div class="hero-fundo" aria-hidden="true">
-            <div class="hero-grelha"></div>
-            <svg class="hero-tenis" viewBox="0 0 200 100" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-                <path d="M10 72 C 8 56, 10 44, 22 36 C 30 31, 36 28, 40 20 C 44 12, 52 8, 60 12 C 66 15, 66 22, 70 24 C 90 24, 150 28, 172 44 C 184 53, 190 60, 190 70 L 10 70 Z" fill="#c6ff00"/>
-                <path d="M46 22 C 50 16, 58 14, 64 18 C 68 21, 68 28, 64 32 C 58 28, 50 26, 46 22 Z" fill="#8fd400"/>
-                <path d="M58 32 L78 24 M64 40 L86 32 M70 48 L94 41 M76 56 L100 50" stroke="#0a0a0a" stroke-width="2.2" fill="none"/>
-                <path d="M40 64 C 70 54, 120 54, 158 60" stroke="#0a0a0a" stroke-width="2.2" fill="none"/>
-                <path d="M8 70 L192 70 C 196 70 198 74 196 80 C 194 88 186 92 174 92 L 30 92 C 16 92 8 86 6 78 C 5 74 6 70 8 70 Z" fill="#2a2a2a" stroke="#c6ff00" stroke-width="2"/>
-                <path d="M20 79 L184 79" stroke="#c6ff00" stroke-width="2.5" fill="none"/>
-            </svg>
-        </div>
-
-        <div class="container hero-content">
-            <p class="etiqueta etiqueta-clara">Sneakers & Streetwear</p>
-            <h1>Sneakers com <span class="destaque-texto">atitude</span>, para quem não passa despercebido</h1>
-            <p class="hero-subtitulo">Curadoria a sério, peças autênticas e edições limitadas — a loja para quem vive a cultura sneaker todos os dias.</p>
-            <div class="hero-cta">
-                <a href="#colecao" class="btn btn-primario btn-grande">Ver Coleção</a>
-                <a href="#contacto" class="btn btn-secundario btn-grande">Visitar a Loja</a>
+    <main>
+    <section class="hero-c"><div class="container hero-c-in">
+        <div class="hero-c-cartao">
+            <div class="hero-c-txt">
+                <p class="etiqueta">Sneakers &amp; streetwear</p>
+                <h1>Sneakers com atitude, sem pressa</h1>
+                <p>Curadoria a sério, peças autênticas e edições limitadas, entregues em 48h.</p>
+                <div class="hero-cta"><a href="colecao.html" class="btn btn-grande">Ver coleção</a><a href="colecao.html?sale=1" class="btn btn-contorno btn-grande">Saldos</a></div>
             </div>
+            <a href="colecao.html" class="hero-c-foto"><img src="img/hero.webp" width="1200" height="1500" alt="Par de sneakers a flutuar sobre fundo claro" fetchpriority="high"><span class="chip-flutua"><strong>Air Step Classic</strong> 89 €</span></a>
+        </div>
+    </div></section>
+    <section class="confianca confianca-c"><div class="container"><ul class="container confianca-lista"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg><span><strong>Entrega em 48h</strong>Portugal continental</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg><span><strong>Trocas grátis</strong>até 30 dias</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="m9 12 2 2 4-4"/></svg><span><strong>100% autênticas</strong>cada par é verificado</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><span><strong>4,8 / 5</strong>avaliação dos clientes</span></li></ul></div></section>
+    <section class="bento-sec"><div class="container">
+        <div class="secao-topo reveal"><div><p class="etiqueta">Explora</p><h2>Por onde queres começar?</h2></div></div>
+        <div class="bento">
+            <a class="b1 reveal" href="colecao.html?cat=Running"><img src="img/q-run.webp" width="800" height="800" loading="lazy" alt=""><span>Running<i>Leves e respiráveis</i></span></a>
+            <a class="b2 reveal" href="colecao.html?cat=Lifestyle"><img src="img/q-life.webp" width="800" height="800" loading="lazy" alt=""><span>Lifestyle<i>Para a cidade toda</i></span></a>
+            <a class="b3 reveal" href="colecao.html?cat=Cano%20alto"><img src="img/q-high.webp" width="800" height="800" loading="lazy" alt=""><span>Cano alto<i>Clássicos de sempre</i></span></a>
+            <div class="b4 reveal"><p class="etiqueta">Próximo drop</p><h3>Edição limitada de outono</h3><div class="contagem-tempo" data-contagem></div></div>
+        </div>
+    </div></section>
+    <section id="colecao" class="colecao"><div class="container" data-carrossel>
+        <div class="secao-topo reveal"><div><p class="etiqueta">Em destaque</p><h2>Os favoritos do momento</h2></div>
+            <div class="setas"><button type="button" class="seta" data-prev aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button><button type="button" class="seta" data-next aria-label="Seguinte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></div></div>
+        <div class="carrossel"><div class="faixa" data-grelha="vendidos"></div></div>
+    </div></section>
+    
+    <section id="sobre" class="sobre"><div class="container">
+        <div class="historia reveal"><img src="img/hist1.webp" width="900" height="1125" loading="lazy" alt="Pormenor da sola de um sneaker, com amortecedor amarelo">
+            <div class="historia-texto"><p class="etiqueta">A nossa história</p><h2>Mais do que uma loja, uma cultura</h2>
+                <p>A Sole House nasceu da paixão por sneakers a sério. Não vendemos só calçado: curamos peças que contam uma história e fazem parte de uma cultura viva.</p>
+                <p>Cada par passa por nós antes de chegar a ti: verificado, autêntico, pronto para seres tu a decidir o próximo passo.</p>
+                <div class="numeros"><div><span>100%</span>Peças autênticas verificadas</div><div><span>500+</span>Pares vendidos este ano</div><div><span>48h</span>Entrega rápida em Portugal</div></div></div></div>
+        <div class="historia historia-invertida reveal"><img src="img/hist2.webp" width="900" height="1125" loading="lazy" alt="Ténis preto de cano alto pendurado pelos atacadores contra uma parede branca">
+            <div class="historia-texto"><p class="etiqueta">Curadoria</p><h2>Poucos pares, escolhidos a dedo</h2>
+                <p>Não temos prateleiras infinitas. Escolhemos cada modelo pelo design, pelo conforto e pela história que traz, e deixamos de fora o resto.</p>
+                <a href="colecao.html" class="link-seta">Ver a coleção →</a></div></div>
+    </div></section>
+    <section class="faq-sec"><div class="container faq-grid">
+        <div><p class="etiqueta">Perguntas frequentes</p><h2>Tudo o que costumam perguntar</h2></div>
+        <div class="faq reveal">
+            <details open><summary>Como sei que os pares são autênticos?</summary><p>Cada par passa por cinco verificações antes de chegar à loja: origem, materiais, etiquetas, sola e caixa.</p></details>
+            <details><summary>Quanto demora a entrega?</summary><p>48 horas em Portugal continental. Os portes são grátis a partir de 150 €.</p></details>
+            <details><summary>Posso trocar de tamanho?</summary><p>Sim, as trocas são gratuitas até 30 dias, com o par por usar e na caixa original.</p></details>
+            <details><summary>Têm loja física?</summary><p>Sim. Passa por cá de terça a sábado, das 11h às 19h, e experimenta antes de decidir.</p></details>
+        </div>
+    </div></section>
+    
+    <section id="depoimentos" class="depoimentos"><div class="container">
+        <div class="secao-topo reveal"><div><p class="etiqueta">Quem já comprou</p><h2>A comunidade fala por nós</h2></div></div>
+        <div class="depoimentos-grid"><figure class="depoimento-cartao reveal"><blockquote class="depoimento-texto">"Chegou em 2 dias, tudo original e com a caixa impecável. Já é a terceira compra."</blockquote><figcaption><span class="depoimento-autor">Nome do Cliente</span><span class="depoimento-cargo">Cliente Sole House</span></figcaption></figure><figure class="depoimento-cartao reveal"><blockquote class="depoimento-texto">"Consegui um par de edição limitada que já não se encontrava em lado nenhum. Recomendo."</blockquote><figcaption><span class="depoimento-autor">Nome do Cliente</span><span class="depoimento-cargo">Cliente Sole House</span></figcaption></figure><figure class="depoimento-cartao reveal"><blockquote class="depoimento-texto">"Atendimento direto, sem enrolação, e sabem mesmo do que estão a falar."</blockquote><figcaption><span class="depoimento-autor">Nome do Cliente</span><span class="depoimento-cargo">Cliente Sole House</span></figcaption></figure></div>
+    </div></section>
+    
+    <section class="newsletter news-c">
+        <div class="container newsletter-in reveal">
+            <div><h2>Fica a par dos drops</h2><p>Um email de vez em quando, só com o que vale a pena.</p></div>
+            <form class="news" data-news><label class="sr" for="newsEmailnews-c" style="position:absolute;left:-9999px">Email</label><input id="newsEmailnews-c" type="email" placeholder="O teu email" required><button type="submit" class="btn btn-acc">Subscrever</button><p class="news-nota" style="flex-basis:100%"></p></form>
         </div>
     </section>
-
-    <!-- ============================================
-         COLEÇÃO
-         ============================================ -->
-    <section id="colecao" class="colecao">
-        <div class="container">
-            <p class="etiqueta etiqueta-centro">A Coleção</p>
-            <h2 class="titulo-centro">Últimos lançamentos</h2>
-
-            <div class="produtos-grid">
-                <article class="produto-cartao reveal">
-                    <div class="produto-imagem" style="--cor-produto:#c6ff00">
-                        <svg viewBox="0 0 240 140" stroke-linejoin="round" stroke-linecap="round">
-                            <defs>
-                                <linearGradient id="b1" x1="0" y1="0" x2="0.12" y2="1"><stop offset="0%" stop-color="currentColor"/><stop offset="60%" stop-color="currentColor"/><stop offset="100%" stop-color="#000" stop-opacity="0.25"/></linearGradient>
-                                <linearGradient id="s1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fbfbf8"/><stop offset="55%" stop-color="#e9e9e1"/><stop offset="100%" stop-color="#c7c7bb"/></linearGradient>
-                            </defs>
-                            <ellipse cx="122" cy="126" rx="98" ry="7" fill="#000" opacity="0.08"/>
-                            <path d="M20 96 C18 88 24 81 34 80 L202 72 C216 71 226 80 228 92 C230 106 220 116 204 118 L42 120 C26 120 20 108 20 96 Z" fill="url(#s1)" stroke="#9a9a8e" stroke-width="1.4"/>
-                            <path d="M28 92 L220 84" stroke="#fff" stroke-opacity="0.5" stroke-width="3"/>
-                            <g stroke="#9a9a8e" stroke-width="1.5" opacity="0.7"><line x1="55" y1="106" x2="55" y2="113"/><line x1="90" y1="108" x2="90" y2="115"/><line x1="125" y1="109" x2="125" y2="116"/><line x1="160" y1="107" x2="160" y2="114"/><line x1="195" y1="104" x2="195" y2="111"/></g>
-                            <path d="M24 84 C22 76 28 70 37 69 L200 61 C210 60 218 66 220 74 L222 88 L24 88 Z" fill="#161616"/>
-                            <path d="M30 80 L212 72" stroke="#fff" stroke-opacity="0.12" stroke-width="2"/>
-                            <path d="M172 22 C194 26 212 40 220 58 C224 67 222 76 213 78 L184 80 L180 80 C177 61 175 40 172 22 Z" fill="url(#b1)" stroke="#000" stroke-opacity="0.6" stroke-width="2.2"/>
-                            <path d="M172 22 C181 16 191 17 198 22" fill="none" stroke="#000" stroke-opacity="0.4" stroke-width="2"/>
-                            <path d="M180 24 L184 80" stroke="#000" stroke-opacity="0.35" stroke-width="1.6"/>
-                            <path d="M22 74 C14 56 18 38 34 27 C45 19 56 17 63 9 C70 2 80 -1 89 2 C96 5 97 13 102 15 C120 17 152 19 178 30 C190 35 198 44 200 55 L204 78 L24 82 Z" fill="url(#b1)" stroke="#000" stroke-opacity="0.6" stroke-width="2.2"/>
-                            <path d="M22 74 C16 58 19 42 32 31 C40 24 49 21 56 21 C47 34 41 52 41 70 L41 78 Z" fill="#000" fill-opacity="0.22"/>
-                            <path d="M25 30 C36 23 47 20 56 21" fill="none" stroke="#000" stroke-opacity="0.4" stroke-width="1.8"/>
-                            <path d="M100 11 C110 5 121 5 129 12 C134 26 134 43 126 53 L107 51 C104 37 102 23 100 11 Z" fill="currentColor" stroke="#000" stroke-opacity="0.6" stroke-width="2"/>
-                            <path d="M108 20 L124 21 M107 29 L123 31 M107 38 L122 40" stroke="#000" stroke-opacity="0.3" stroke-width="1.6"/>
-                            <path d="M100 11 C110 5 121 5 129 12" fill="none" stroke="#fff" stroke-opacity="0.4" stroke-width="1.6"/>
-                            <g stroke="#000" stroke-opacity="0.85" stroke-width="2.6"><line x1="90" y1="13" x2="118" y2="6"/><line x1="90" y1="13" x2="68" y2="22"/><line x1="95" y1="23" x2="122" y2="16"/><line x1="95" y1="23" x2="73" y2="32"/><line x1="100" y1="33" x2="125" y2="27"/><line x1="100" y1="33" x2="79" y2="42"/></g>
-                            <g fill="#000" fill-opacity="0.85"><circle cx="90" cy="13" r="2.6"/><circle cx="95" cy="23" r="2.6"/><circle cx="100" cy="33" r="2.6"/><circle cx="118" cy="6" r="2.6"/><circle cx="122" cy="16" r="2.6"/><circle cx="125" cy="27" r="2.6"/></g>
-                            <path d="M60 58 C94 47 144 45 190 53" fill="none" stroke="#000" stroke-opacity="0.8" stroke-width="7"/>
-                            <path d="M60 58 C94 47 144 45 190 53" fill="none" stroke="#fff" stroke-opacity="0.2" stroke-width="2" transform="translate(0,-2.5)"/>
-                            <path d="M172 22 C192 26 208 38 216 54" fill="none" stroke="#fff" stroke-opacity="0.3" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <span class="produto-tag produto-tag-novo">Novo</span>
-                    <h3>Air Step Classic</h3>
-                    <p class="produto-desc">O clássico reinventado — conforto de todo o dia com atitude de sempre.</p>
-                    <div class="produto-rodape">
-                        <span class="produto-preco">89 €</span>
-                        <a href="#contacto" class="produto-link">Perguntar →</a>
-                    </div>
-                </article>
-
-                <article class="produto-cartao reveal">
-                    <div class="produto-imagem" style="--cor-produto:#ff4fd8">
-                        <svg viewBox="0 0 240 140" stroke-linejoin="round" stroke-linecap="round">
-                            <defs>
-                                <linearGradient id="b2" x1="0" y1="0" x2="0.12" y2="1"><stop offset="0%" stop-color="currentColor"/><stop offset="60%" stop-color="currentColor"/><stop offset="100%" stop-color="#000" stop-opacity="0.25"/></linearGradient>
-                                <linearGradient id="s2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fbfbf8"/><stop offset="55%" stop-color="#e9e9e1"/><stop offset="100%" stop-color="#c7c7bb"/></linearGradient>
-                            </defs>
-                            <ellipse cx="122" cy="126" rx="98" ry="7" fill="#000" opacity="0.08"/>
-                            <path d="M20 96 C18 88 24 81 34 80 L202 72 C216 71 226 80 228 92 C230 106 220 116 204 118 L42 120 C26 120 20 108 20 96 Z" fill="url(#s2)" stroke="#9a9a8e" stroke-width="1.4"/>
-                            <path d="M28 92 L220 84" stroke="#fff" stroke-opacity="0.5" stroke-width="3"/>
-                            <g stroke="#9a9a8e" stroke-width="1.5" opacity="0.7"><line x1="55" y1="106" x2="55" y2="113"/><line x1="90" y1="108" x2="90" y2="115"/><line x1="125" y1="109" x2="125" y2="116"/><line x1="160" y1="107" x2="160" y2="114"/><line x1="195" y1="104" x2="195" y2="111"/></g>
-                            <path d="M24 84 C22 76 28 70 37 69 L200 61 C210 60 218 66 220 74 L222 88 L24 88 Z" fill="#161616"/>
-                            <path d="M30 80 L212 72" stroke="#fff" stroke-opacity="0.12" stroke-width="2"/>
-                            <path d="M172 22 C194 26 212 40 220 58 C224 67 222 76 213 78 L184 80 L180 80 C177 61 175 40 172 22 Z" fill="url(#b2)" stroke="#000" stroke-opacity="0.6" stroke-width="2.2"/>
-                            <path d="M172 22 C181 16 191 17 198 22" fill="none" stroke="#000" stroke-opacity="0.4" stroke-width="2"/>
-                            <path d="M180 24 L184 80" stroke="#000" stroke-opacity="0.35" stroke-width="1.6"/>
-                            <path d="M22 74 C14 56 18 38 34 27 C45 19 56 17 63 9 C70 2 80 -1 89 2 C96 5 97 13 102 15 C120 17 152 19 178 30 C190 35 198 44 200 55 L204 78 L24 82 Z" fill="url(#b2)" stroke="#000" stroke-opacity="0.6" stroke-width="2.2"/>
-                            <path d="M22 74 C16 58 19 42 32 31 C40 24 49 21 56 21 C47 34 41 52 41 70 L41 78 Z" fill="#000" fill-opacity="0.22"/>
-                            <path d="M25 30 C36 23 47 20 56 21" fill="none" stroke="#000" stroke-opacity="0.4" stroke-width="1.8"/>
-                            <path d="M100 11 C110 5 121 5 129 12 C134 26 134 43 126 53 L107 51 C104 37 102 23 100 11 Z" fill="currentColor" stroke="#000" stroke-opacity="0.6" stroke-width="2"/>
-                            <path d="M108 20 L124 21 M107 29 L123 31 M107 38 L122 40" stroke="#000" stroke-opacity="0.3" stroke-width="1.6"/>
-                            <path d="M100 11 C110 5 121 5 129 12" fill="none" stroke="#fff" stroke-opacity="0.4" stroke-width="1.6"/>
-                            <g stroke="#000" stroke-opacity="0.85" stroke-width="2.6"><line x1="90" y1="13" x2="118" y2="6"/><line x1="90" y1="13" x2="68" y2="22"/><line x1="95" y1="23" x2="122" y2="16"/><line x1="95" y1="23" x2="73" y2="32"/><line x1="100" y1="33" x2="125" y2="27"/><line x1="100" y1="33" x2="79" y2="42"/></g>
-                            <g fill="#000" fill-opacity="0.85"><circle cx="90" cy="13" r="2.6"/><circle cx="95" cy="23" r="2.6"/><circle cx="100" cy="33" r="2.6"/><circle cx="118" cy="6" r="2.6"/><circle cx="122" cy="16" r="2.6"/><circle cx="125" cy="27" r="2.6"/></g>
-                            <path d="M60 58 C94 47 144 45 190 53" fill="none" stroke="#000" stroke-opacity="0.8" stroke-width="7"/>
-                            <path d="M60 58 C94 47 144 45 190 53" fill="none" stroke="#fff" stroke-opacity="0.2" stroke-width="2" transform="translate(0,-2.5)"/>
-                            <path d="M172 22 C192 26 208 38 216 54" fill="none" stroke="#fff" stroke-opacity="0.3" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <span class="produto-tag produto-tag-limitado">Edição Limitada</span>
-                    <h3>Urban Runner Pink</h3>
-                    <p class="produto-desc">Drop exclusivo, tiragem limitada — para quem chega primeiro.</p>
-                    <div class="produto-rodape">
-                        <span class="produto-preco">129 €</span>
-                        <a href="#contacto" class="produto-link">Perguntar →</a>
-                    </div>
-                </article>
-
-                <article class="produto-cartao reveal">
-                    <div class="produto-imagem" style="--cor-produto:#3ec8ff">
-                        <svg viewBox="0 0 240 140" stroke-linejoin="round" stroke-linecap="round">
-                            <defs>
-                                <linearGradient id="b3" x1="0" y1="0" x2="0.12" y2="1"><stop offset="0%" stop-color="currentColor"/><stop offset="60%" stop-color="currentColor"/><stop offset="100%" stop-color="#000" stop-opacity="0.25"/></linearGradient>
-                                <linearGradient id="s3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fbfbf8"/><stop offset="55%" stop-color="#e9e9e1"/><stop offset="100%" stop-color="#c7c7bb"/></linearGradient>
-                            </defs>
-                            <ellipse cx="122" cy="126" rx="98" ry="7" fill="#000" opacity="0.08"/>
-                            <path d="M20 96 C18 88 24 81 34 80 L202 72 C216 71 226 80 228 92 C230 106 220 116 204 118 L42 120 C26 120 20 108 20 96 Z" fill="url(#s3)" stroke="#9a9a8e" stroke-width="1.4"/>
-                            <path d="M28 92 L220 84" stroke="#fff" stroke-opacity="0.5" stroke-width="3"/>
-                            <g stroke="#9a9a8e" stroke-width="1.5" opacity="0.7"><line x1="55" y1="106" x2="55" y2="113"/><line x1="90" y1="108" x2="90" y2="115"/><line x1="125" y1="109" x2="125" y2="116"/><line x1="160" y1="107" x2="160" y2="114"/><line x1="195" y1="104" x2="195" y2="111"/></g>
-                            <path d="M24 84 C22 76 28 70 37 69 L200 61 C210 60 218 66 220 74 L222 88 L24 88 Z" fill="#161616"/>
-                            <path d="M30 80 L212 72" stroke="#fff" stroke-opacity="0.12" stroke-width="2"/>
-                            <path d="M172 22 C194 26 212 40 220 58 C224 67 222 76 213 78 L184 80 L180 80 C177 61 175 40 172 22 Z" fill="url(#b3)" stroke="#000" stroke-opacity="0.6" stroke-width="2.2"/>
-                            <path d="M172 22 C181 16 191 17 198 22" fill="none" stroke="#000" stroke-opacity="0.4" stroke-width="2"/>
-                            <path d="M180 24 L184 80" stroke="#000" stroke-opacity="0.35" stroke-width="1.6"/>
-                            <path d="M22 74 C14 56 18 38 34 27 C45 19 56 17 63 9 C70 2 80 -1 89 2 C96 5 97 13 102 15 C120 17 152 19 178 30 C190 35 198 44 200 55 L204 78 L24 82 Z" fill="url(#b3)" stroke="#000" stroke-opacity="0.6" stroke-width="2.2"/>
-                            <path d="M22 74 C16 58 19 42 32 31 C40 24 49 21 56 21 C47 34 41 52 41 70 L41 78 Z" fill="#000" fill-opacity="0.22"/>
-                            <path d="M25 30 C36 23 47 20 56 21" fill="none" stroke="#000" stroke-opacity="0.4" stroke-width="1.8"/>
-                            <path d="M100 11 C110 5 121 5 129 12 C134 26 134 43 126 53 L107 51 C104 37 102 23 100 11 Z" fill="currentColor" stroke="#000" stroke-opacity="0.6" stroke-width="2"/>
-                            <path d="M108 20 L124 21 M107 29 L123 31 M107 38 L122 40" stroke="#000" stroke-opacity="0.3" stroke-width="1.6"/>
-                            <path d="M100 11 C110 5 121 5 129 12" fill="none" stroke="#fff" stroke-opacity="0.4" stroke-width="1.6"/>
-                            <g stroke="#000" stroke-opacity="0.85" stroke-width="2.6"><line x1="90" y1="13" x2="118" y2="6"/><line x1="90" y1="13" x2="68" y2="22"/><line x1="95" y1="23" x2="122" y2="16"/><line x1="95" y1="23" x2="73" y2="32"/><line x1="100" y1="33" x2="125" y2="27"/><line x1="100" y1="33" x2="79" y2="42"/></g>
-                            <g fill="#000" fill-opacity="0.85"><circle cx="90" cy="13" r="2.6"/><circle cx="95" cy="23" r="2.6"/><circle cx="100" cy="33" r="2.6"/><circle cx="118" cy="6" r="2.6"/><circle cx="122" cy="16" r="2.6"/><circle cx="125" cy="27" r="2.6"/></g>
-                            <path d="M60 58 C94 47 144 45 190 53" fill="none" stroke="#000" stroke-opacity="0.8" stroke-width="7"/>
-                            <path d="M60 58 C94 47 144 45 190 53" fill="none" stroke="#fff" stroke-opacity="0.2" stroke-width="2" transform="translate(0,-2.5)"/>
-                            <path d="M172 22 C192 26 208 38 216 54" fill="none" stroke="#fff" stroke-opacity="0.3" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <span class="produto-tag produto-tag-mais-vendido">Mais Vendido</span>
-                    <h3>Street Glide Ice</h3>
-                    <p class="produto-desc">Leve, versátil, o favorito de quem anda a cidade toda a pé.</p>
-                    <div class="produto-rodape">
-                        <span class="produto-preco">99 €</span>
-                        <a href="#contacto" class="produto-link">Perguntar →</a>
-                    </div>
-                </article>
-
-                <article class="produto-cartao reveal">
-                    <div class="produto-imagem" style="--cor-produto:#ffb100">
-                        <svg viewBox="0 0 240 140" stroke-linejoin="round" stroke-linecap="round">
-                            <defs>
-                                <linearGradient id="b4" x1="0" y1="0" x2="0.12" y2="1"><stop offset="0%" stop-color="currentColor"/><stop offset="60%" stop-color="currentColor"/><stop offset="100%" stop-color="#000" stop-opacity="0.25"/></linearGradient>
-                                <linearGradient id="s4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fbfbf8"/><stop offset="55%" stop-color="#e9e9e1"/><stop offset="100%" stop-color="#c7c7bb"/></linearGradient>
-                            </defs>
-                            <ellipse cx="122" cy="126" rx="98" ry="7" fill="#000" opacity="0.08"/>
-                            <path d="M20 96 C18 88 24 81 34 80 L202 72 C216 71 226 80 228 92 C230 106 220 116 204 118 L42 120 C26 120 20 108 20 96 Z" fill="url(#s4)" stroke="#9a9a8e" stroke-width="1.4"/>
-                            <path d="M28 92 L220 84" stroke="#fff" stroke-opacity="0.5" stroke-width="3"/>
-                            <g stroke="#9a9a8e" stroke-width="1.5" opacity="0.7"><line x1="55" y1="106" x2="55" y2="113"/><line x1="90" y1="108" x2="90" y2="115"/><line x1="125" y1="109" x2="125" y2="116"/><line x1="160" y1="107" x2="160" y2="114"/><line x1="195" y1="104" x2="195" y2="111"/></g>
-                            <path d="M24 84 C22 76 28 70 37 69 L200 61 C210 60 218 66 220 74 L222 88 L24 88 Z" fill="#161616"/>
-                            <path d="M30 80 L212 72" stroke="#fff" stroke-opacity="0.12" stroke-width="2"/>
-                            <path d="M172 22 C194 26 212 40 220 58 C224 67 222 76 213 78 L184 80 L180 80 C177 61 175 40 172 22 Z" fill="url(#b4)" stroke="#000" stroke-opacity="0.6" stroke-width="2.2"/>
-                            <path d="M172 22 C181 16 191 17 198 22" fill="none" stroke="#000" stroke-opacity="0.4" stroke-width="2"/>
-                            <path d="M180 24 L184 80" stroke="#000" stroke-opacity="0.35" stroke-width="1.6"/>
-                            <path d="M22 74 C14 56 18 38 34 27 C45 19 56 17 63 9 C70 2 80 -1 89 2 C96 5 97 13 102 15 C120 17 152 19 178 30 C190 35 198 44 200 55 L204 78 L24 82 Z" fill="url(#b4)" stroke="#000" stroke-opacity="0.6" stroke-width="2.2"/>
-                            <path d="M22 74 C16 58 19 42 32 31 C40 24 49 21 56 21 C47 34 41 52 41 70 L41 78 Z" fill="#000" fill-opacity="0.22"/>
-                            <path d="M25 30 C36 23 47 20 56 21" fill="none" stroke="#000" stroke-opacity="0.4" stroke-width="1.8"/>
-                            <path d="M100 11 C110 5 121 5 129 12 C134 26 134 43 126 53 L107 51 C104 37 102 23 100 11 Z" fill="currentColor" stroke="#000" stroke-opacity="0.6" stroke-width="2"/>
-                            <path d="M108 20 L124 21 M107 29 L123 31 M107 38 L122 40" stroke="#000" stroke-opacity="0.3" stroke-width="1.6"/>
-                            <path d="M100 11 C110 5 121 5 129 12" fill="none" stroke="#fff" stroke-opacity="0.4" stroke-width="1.6"/>
-                            <g stroke="#000" stroke-opacity="0.85" stroke-width="2.6"><line x1="90" y1="13" x2="118" y2="6"/><line x1="90" y1="13" x2="68" y2="22"/><line x1="95" y1="23" x2="122" y2="16"/><line x1="95" y1="23" x2="73" y2="32"/><line x1="100" y1="33" x2="125" y2="27"/><line x1="100" y1="33" x2="79" y2="42"/></g>
-                            <g fill="#000" fill-opacity="0.85"><circle cx="90" cy="13" r="2.6"/><circle cx="95" cy="23" r="2.6"/><circle cx="100" cy="33" r="2.6"/><circle cx="118" cy="6" r="2.6"/><circle cx="122" cy="16" r="2.6"/><circle cx="125" cy="27" r="2.6"/></g>
-                            <path d="M60 58 C94 47 144 45 190 53" fill="none" stroke="#000" stroke-opacity="0.8" stroke-width="7"/>
-                            <path d="M60 58 C94 47 144 45 190 53" fill="none" stroke="#fff" stroke-opacity="0.2" stroke-width="2" transform="translate(0,-2.5)"/>
-                            <path d="M172 22 C192 26 208 38 216 54" fill="none" stroke="#fff" stroke-opacity="0.3" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <span class="produto-tag produto-tag-novo">Novo</span>
-                    <h3>Retro 90 Gold</h3>
-                    <p class="produto-desc">Nostalgia dos anos 90 com acabamento premium atual.</p>
-                    <div class="produto-rodape">
-                        <span class="produto-preco">109 €</span>
-                        <a href="#contacto" class="produto-link">Perguntar →</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================
-         SOBRE
-         ============================================ -->
-    <section id="sobre" class="sobre">
-        <div class="container">
-            <div class="sobre-grid">
-                <div class="sobre-texto reveal">
-                    <p class="etiqueta">A Nossa História</p>
-                    <h2>Mais do que uma loja, uma cultura</h2>
-                    <p>A Sole House nasceu da paixão por sneakers a sério — não vendemos só calçado, curamos peças que contam uma história e que fazem parte de uma cultura viva.</p>
-                    <p>Cada par passa por nós antes de chegar a ti: verificado, autêntico, pronto para seres tu a decidir o próximo passo.</p>
-                </div>
-                <div class="sobre-destaques">
-                    <div class="destaque reveal">
-                        <span class="destaque-numero">100%</span>
-                        <span class="destaque-label">Peças autênticas verificadas</span>
-                    </div>
-                    <div class="destaque reveal">
-                        <span class="destaque-numero">500+</span>
-                        <span class="destaque-label">Pares vendidos este ano</span>
-                    </div>
-                    <div class="destaque reveal">
-                        <span class="destaque-numero">48h</span>
-                        <span class="destaque-label">Entrega rápida em Portugal</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================
-         DEPOIMENTOS
-         ============================================ -->
-    <section id="depoimentos" class="depoimentos">
-        <div class="container">
-            <p class="etiqueta etiqueta-centro">Quem já comprou</p>
-            <h2 class="titulo-centro">A comunidade fala por nós</h2>
-
-            <div class="depoimentos-grid">
-                <div class="depoimento-cartao reveal">
-                    <p class="depoimento-texto">"Chegou em 2 dias, tudo original e com a caixa impecável. Já é a terceira compra."</p>
-                    <p class="depoimento-autor">Nome do Cliente</p>
-                    <p class="depoimento-cargo">Cliente Sole House</p>
-                </div>
-                <div class="depoimento-cartao reveal">
-                    <p class="depoimento-texto">"Consegui um par de edição limitada que já não se encontrava em lado nenhum. Recomendo."</p>
-                    <p class="depoimento-autor">Nome do Cliente</p>
-                    <p class="depoimento-cargo">Cliente Sole House</p>
-                </div>
-                <div class="depoimento-cartao reveal">
-                    <p class="depoimento-texto">"Atendimento direto, sem enrolação, e sabem mesmo do que estão a falar."</p>
-                    <p class="depoimento-autor">Nome do Cliente</p>
-                    <p class="depoimento-cargo">Cliente Sole House</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================
-         FAIXA CTA
-         ============================================ -->
-    <section class="cta-faixa">
-        <div class="container cta-faixa-content">
-            <h2>Não percas o próximo drop</h2>
-            <p>Segue-nos ou passa pela loja física — as edições limitadas esgotam rápido.</p>
-            <a href="#contacto" class="btn btn-branco btn-grande">Falar Connosco</a>
-        </div>
-    </section>
-
-    <!-- ============================================
-         LOJA / CONTACTO
-         ============================================ -->
+    
     <section id="contacto" class="contacto">
         <div class="container">
-            <p class="etiqueta etiqueta-centro">Loja Física & Contacto</p>
-            <h2 class="titulo-centro">Vem conhecer-nos</h2>
-
+            <div class="secao-topo reveal"><div><p class="etiqueta">Loja física &amp; contacto</p><h2>Vem conhecer-nos</h2></div></div>
             <div class="contacto-grid">
                 <div class="contacto-info">
-                    <div class="contacto-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        <span>Rua Exemplo, 123 — Cidade</span>
-                    </div>
-                    <div class="contacto-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                        <span>Terça a Sábado, 11h–19h</span>
-                    </div>
-                    <div class="contacto-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        <span>+351 000 000 000</span>
-                    </div>
-                    <div class="contacto-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
-                        <span>ola@solehouse.pt</span>
-                    </div>
+                    <div class="contacto-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Rua Exemplo, 123 — Cidade</span></div>
+                    <div class="contacto-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Terça a sábado, 11h–19h</span></div>
+                    <div class="contacto-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+351 000 000 000</span></div>
+                    <div class="contacto-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><span>ola@solehouse.pt</span></div>
                 </div>
-
                 <form class="contacto-form" id="formContacto">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" required>
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Ex: Tens o Air Step Classic no tamanho 42?" required></textarea>
-
-                    <button type="submit" class="btn btn-primario">Enviar Mensagem</button>
+                    <label for="nome">Nome</label><input type="text" id="nome" name="nome" required>
+                    <label for="email">Email</label><input type="email" id="email" name="email" required>
+                    <label for="mensagem">Mensagem</label><textarea id="mensagem" name="mensagem" rows="4" placeholder="Ex: Tens o Air Step Classic no tamanho 42?" required></textarea>
+                    <button type="submit" class="btn">Enviar mensagem</button>
                     <p class="form-nota" id="formNota"></p>
-
                     <div class="confirmacao-envio" id="confirmacaoEnvio" hidden>
                         <p class="confirmacao-titulo">A tua mensagem está pronta a enviar</p>
                         <p class="confirmacao-texto">O teu email não abriu automaticamente (é normal se não tiveres um cliente de email predefinido). Escolhe uma opção:</p>
-                        <div class="confirmacao-acoes">
-                            <a href="#" id="linkAbrirEmail" class="btn btn-primario">Abrir no meu email</a>
-                            <button type="button" id="btnCopiarMensagem" class="btn btn-secundario-claro">Copiar mensagem</button>
-                        </div>
+                        <div class="confirmacao-acoes"><a href="#" id="linkAbrirEmail" class="btn btn-acc">Abrir no meu email</a><button type="button" id="btnCopiarMensagem" class="btn btn-contorno">Copiar mensagem</button></div>
                         <textarea id="textoMensagem" class="confirmacao-texto-area" readonly rows="5"></textarea>
                     </div>
                 </form>
             </div>
         </div>
     </section>
+    </main>
 
-    <!-- ============================================
-         RODAPÉ
-         ============================================ -->
     <footer class="rodape">
-        <div class="container rodape-content">
-            <p>&copy; <span id="anoAtual"></span> Sole House. Todos os direitos reservados.</p>
-            <div class="rodape-social">
-                <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg></a>
-                <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8c-.9-.9-1.5-2.1-1.6-3.5h-3.1v13.3c0 1.6-1.3 2.9-2.9 2.9s-2.9-1.3-2.9-2.9 1.3-2.9 2.9-2.9c.3 0 .6.05.9.13V9.6c-.3-.04-.6-.07-.9-.07-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6V8.3c1.3.9 2.8 1.4 4.5 1.4V6.5c-1 0-1.9-.3-2.9-.7z"/></svg></a>
-                <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.87v-6.98H7.9V12h2.54V9.8c0-2.5 1.5-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.98A10 10 0 0 0 22 12z"/></svg></a>
+        <div class="container">
+            <div class="rodape-grelha">
+                <div class="rodape-marca"><a href="index.html" class="logo"><svg class="logo-icone" viewBox="0 0 200 100" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M10 72 C 8 56, 10 44, 22 36 C 30 31, 36 28, 40 20 C 44 12, 52 8, 60 12 C 66 15, 66 22, 70 24 C 90 24, 150 28, 172 44 C 184 53, 190 60, 190 70 L 10 70 Z" fill="#c6ff00"/><path d="M8 70 L192 70 C 196 70 198 74 196 80 C 194 88 186 92 174 92 L 30 92 C 16 92 8 86 6 78 C 5 74 6 70 8 70 Z" fill="#2a2a2a" stroke="#c6ff00" stroke-width="2"/></svg>SOLE HOUSE</a><p>Sneakers e streetwear com curadoria a sério. Peças autênticas, edições limitadas, cultura de sempre.</p>
+                    <div class="rodape-social"><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg></a><a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8c-.9-.9-1.5-2.1-1.6-3.5h-3.1v13.3c0 1.6-1.3 2.9-2.9 2.9s-2.9-1.3-2.9-2.9 1.3-2.9 2.9-2.9c.3 0 .6.05.9.13V9.6c-.3-.04-.6-.07-.9-.07-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6V8.3c1.3.9 2.8 1.4 4.5 1.4V6.5c-1 0-1.9-.3-2.9-.7z"/></svg></a><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.87v-6.98H7.9V12h2.54V9.8c0-2.5 1.5-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.98A10 10 0 0 0 22 12z"/></svg></a></div></div>
+                <div><h4>Loja</h4><ul><li><a href="colecao.html">Calçado</a></li><li><a href="colecao.html?sort=novidades">Novidades</a></li><li><a href="colecao.html?sale=1">Saldos</a></li></ul></div>
+                <div><h4>Ajuda</h4><ul><li><a href="index.html#contacto">Entregas</a></li><li><a href="index.html#contacto">Trocas e devoluções</a></li><li><a href="index.html#contacto">Guia de tamanhos</a></li></ul></div>
+                <div><h4>Sole House</h4><ul><li><a href="index.html#sobre">Sobre nós</a></li><li><a href="index.html#contacto">Loja física</a></li><li><a href="index.html#contacto">Contacto</a></li></ul></div>
+            </div>
+            <div class="rodape-fim">
+                <p>&copy; <span id="anoAtual"></span> Sole House. Todos os direitos reservados.</p>
+                <div class="pagamentos" aria-label="Métodos de pagamento"><span>Visa</span><span>Mastercard</span><span>MB WAY</span><span>Multibanco</span><span>PayPal</span></div>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <div id="veu"></div>
+
+    <div id="busca" role="dialog" aria-label="Pesquisa">
+        <div class="container">
+            <form id="buscaForm" role="search">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                <input id="buscaInput" type="search" placeholder="Pesquisar sneakers, cores, materiais…" autocomplete="off" aria-label="Pesquisar">
+                <button type="button" class="ic" data-fechar aria-label="Fechar pesquisa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+            </form>
+            <p id="buscaTitulo"></p>
+            <ul id="buscaResultados"></ul>
+        </div>
+    </div>
+
+    <aside id="carrinho" class="gaveta" aria-label="Carrinho de compras">
+        <div class="gaveta-topo"><h2>Carrinho</h2><button type="button" class="ic" data-fechar aria-label="Fechar carrinho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg></button></div>
+        <div id="carrinhoProgresso" class="progresso" hidden><p id="progressoTexto"></p><div class="barra"><i id="progressoBarra"></i></div></div>
+        <p id="carrinhoVazio">O teu carrinho está vazio.<br>Escolhe um tamanho num produto e adiciona-o aqui.</p>
+        <ul id="carrinhoLista"></ul>
+        <div id="carrinhoRodape" hidden>
+            <p class="sub"><span>Subtotal</span><strong id="carrinhoTotal"></strong></p>
+            <button type="button" class="btn btn-acc btn-grande" id="btnFinalizar">Finalizar compra</button>
+            <small>Portes e impostos calculados ao finalizar.</small>
+        </div>
+        <div id="carrinhoDemo" class="demo" hidden>
+            <div id="demoCorpo">
+                <h3>Finalizar compra</h3>
+                <p class="nota">Isto é uma <strong>simulação</strong> do template. Numa loja real, este passo liga ao teu sistema de pagamento (cartão, MB Way, PayPal…). Nada é cobrado, guardado ou enviado.</p>
+                <ul id="demoResumo"></ul>
+                <div class="demo-acoes"><button type="button" class="btn btn-acc btn-grande" id="demoConcluir">Concluir (simulação)</button><button type="button" class="btn btn-contorno" id="demoVoltar">Voltar ao carrinho</button></div>
+            </div>
+            <div id="demoFim" hidden>
+                <h3>Pedido simulado</h3>
+                <p class="nota">Tudo certo: o fluxo de compra funciona. Nenhum dado foi guardado ou enviado e o carrinho foi esvaziado.</p>
+                <div class="demo-acoes"><button type="button" class="btn btn-acc btn-grande" id="demoFechar">Continuar a ver a loja</button></div>
+            </div>
+        </div>
+    </aside>
+    <script src="app.js"></script>
 </body>
 </html>
