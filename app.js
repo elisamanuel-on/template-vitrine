@@ -212,15 +212,6 @@ $$('[data-contagem]').forEach(el => {
 });
 
 // ============================================
-// Carrosséis (setas + deslizar)
-// ============================================
-$$('[data-carrossel]').forEach(c => {
-    const faixa = $('.faixa', c); const passo = () => faixa.clientWidth * .8;
-    $('[data-prev]', c).addEventListener('click', () => faixa.scrollBy({ left: -passo(), behavior: 'smooth' }));
-    $('[data-next]', c).addEventListener('click', () => faixa.scrollBy({ left: passo(), behavior: 'smooth' }));
-});
-
-// ============================================
 // Grelhas da página inicial: <div data-grelha="todos|novos|vendidos|air|glide|noir" data-max="8">
 // ============================================
 const SELECOES = {
